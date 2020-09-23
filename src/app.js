@@ -25,7 +25,12 @@ class App {
 
   middlewares() {
     this.server.use(Sentry.Handlers.requestHandler());
-    this.server.use(cors());
+    this.server.use(
+      cors({
+        origin: '*',
+        methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
+      })
+    );
     this.server.use(express.json());
   }
 
