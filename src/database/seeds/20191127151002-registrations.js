@@ -3,6 +3,8 @@ const faker = require('faker');
 const { addMonths, startOfDay, endOfDay } = require('date-fns');
 const { Client } = require('pg');
 
+const configDB = require('../../config/database');
+
 const client = new Client({
   host: 'localhost',
   user: 'postgres',
