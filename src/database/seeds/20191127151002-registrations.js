@@ -7,7 +7,7 @@ const configDB = require('../../config/database');
 
 const client = new Client({
   host: configDB.host,
-  user: configDB.user,
+  user: configDB.username,
   password: configDB.password,
   database: configDB.database,
   port: 5432,
